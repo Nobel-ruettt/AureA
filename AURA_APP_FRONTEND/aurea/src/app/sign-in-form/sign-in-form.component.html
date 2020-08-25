@@ -1,0 +1,36 @@
+<div class="container-sm">
+  <form class="text-center border border-light p-5" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <p class="h4 mb-4">Sign in</p>
+  
+    <!-- Email -->
+    <input 
+        type="text" 
+        class="form-control mb-4" 
+        placeholder="Username" 
+        required 
+        [(ngModel)]="model.username" 
+        name="username">
+  
+    <!-- Password -->
+    <input 
+        type="password" 
+        class="form-control mb-4"
+        placeholder="Password"
+        required
+        [(ngModel)]="model.password"
+        name="password">
+  
+    <!-- Sign in button -->
+    <button 
+        mdbBtn color="info" 
+        block="true" 
+        class="my-4" 
+        type="submit"
+        [disabled]="!loginForm.valid">Sign in</button>
+  
+    <!-- Register -->
+    <p>Not a member?
+      <a href="">Register</a>
+    </p>
+  </form>
+</div>
