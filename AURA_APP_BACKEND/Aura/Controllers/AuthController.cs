@@ -92,7 +92,8 @@ namespace Aura.Controllers
 
             return Ok(new
             {
-                token = tokenHandler.WriteToken(token)
+                token = tokenHandler.WriteToken(token),
+                user = userFromRepo
             });
         }
     }
